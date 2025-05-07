@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>25 Bakes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Sans', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6e4d7;
+      scroll-behavior: smooth;
+
+      .about-text {
+  font-family: 'Oregano', cursive;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #2a2b25;
+  max-width: 700px;
+  margin: auto;
+}
+    }
+
+    header {
+      background-color: #e6e4d7;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+  margin: 0;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 3.5rem;
+  color: #2a0a12;
+}
+
+
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      background-color: #e6e4d7;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #2a0a12;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #bf360c;
+    }
+
+    .hero {
+      background-image: url("bg.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 800px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    section {
+      padding: 3rem 2rem;
+    }
+
+    .menu-grid, .item-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .menu-item, .item-card {
+      background: #ffffff;
+      border: 1px solid #e6e4d7;
+      border-radius: 10px;
+      width: 220px;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-item:hover, .item-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-item a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .menu-item img, .item-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .menu-item h3, .item-card h4 {
+      margin-top: 0.5rem;
+      color: #5d4037;
+    }
+
+    
+   
+
+    .category-section h2 {
+      text-align: center;
+      color: #6d4c41;
+      font-size: 2rem;
+    }
+
+    footer {
+      background-color: #e6e4d7;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #2a0a12;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .carousel {
+  position: relative;
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.review-slide {
+  display: none;
+  background: #c1bdb3;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #ffe0b2;
+  color: #5d4037;
+  font-style: italic;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-slide.active {
+  display: block;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+
+    <h1> <a href="https://www.instagram.com/25_bakes/" target="25 bakes" style="text-decoration: none; color: inherit;">25 Bakes</a></h1>
+   
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#cakes">Cakes</a>
+    <a href="#cookies">Cookies</a>
+    <a href="#cupcakes">Cupcakes</a>
+    <a href="#brownies">Brownies</a>
+    <a href="#cheesecake">Cheesecake</a>
+    <a href="#other">Healthy Baked Goods</a>
+    <a href="#reviews">Reviews</a>
+    
+  <a href="#order">Order Now</a>
+  </nav>
+
+  <div class="hero">
+    <h2>Delicious, Homemade, and Made with Love</h2>
+  </div>
+
+  <section class="menu">
+    <h2 style="text-align:center; color:#6d4c41;">Our Categories</h2>
+    <div class="menu-grid">
+      <div class="menu-item"><a href="#cakes"><img src="cake.jpg"  width="300" height="200" alt="Cakes" /><h3>Cakes</h3></a></div>
+      <div class="menu-item"><a href="#cookies"><img src="cookie.jpg"  width="300" height="200" alt="Cookies" /><h3>Cookies</h3></a></div>
+      <div class="menu-item"><a href="#cupcakes"><img src="cupcake.jpg"  width="300" height="200" alt="Cupcakes" /><h3>Cupcakes</h3></a></div>
+      <div class="menu-item"><a href="#brownies"><img src="brownies.jpg"  width="300" height="200" alt="Brownies" /><h3>Brownies</h3></a></div>
+      <div class="menu-item"><a href="#cheesecake"><img src="cheesecake.jpg"  width="300" height="200" alt="Cheesecake" /><h3>Cheesecake</h3></a></div>
+      <div class="menu-item"><a href="#healthy baked goods"><img src="banana.jpg"  width="300" height="200" alt="Healthy Baked Goods" /><h3>Healthy Baked Goods</h3></a></div>
+
+    </div>
+  </section>
+
+  <!-- Category Sections -->
+  <section id="cakes" class="category-section"  >
+
+    <h2>Cakes</h2>
+   
+    <div class="item-grid">
+      <div class="item-card"><img src="cake1.jpg" alt="Chocolate Cake"  width="300" height="200"><h4>Chocolate Cake</h4>500g- ₹650</div>
+      <div class="item-card"><img src="cake2.jpg" width="300" height="200" alt="Red Velvet"><h4>Red Velvet</h4>500g- ₹750</div>
+      <div class="item-card"><img src="cake5.jpg" width="300" height="200" alt="Vanilla Cake"><h4>Vanilla Cake</h4>500g- ₹500</div>
+      <div class="item-card"><img src="cake6.jpg" width="300" height="200" alt="Butterscotch Cake"><h4>Butterscotch Cake</h4>500g- ₹550</div>
+      <div class="item-card"><img src="cake7.jpg" width="300" height="200" alt="Pineapple Cake"><h4>Pineapple Cake</h4>500g- ₹450</div>
+      <div class="item-card"><img src="cake3.jpg" width="300" height="200" alt="Strawberry Fruit Cake"><h4>Strawberry Fruit Cake</h4>500g- ₹800 (seasonal)</div>
+      <div class="item-card"><img src="cake4.jpg" width="300" height="200" alt="Mango Fruit Cake"><h4>Mango Fruit Cake</h4>500g- ₹800 (seasonal)</div>
+    </div>
+  </section>
+
+  <section id="cookies" class="category-section">
+    <h2>Cookies</h2>
+    <div class="item-grid">
+      <div class="item-card"><img src="cookie1.jpg" width="300" height="200" alt="Choco Chip"><h4>Choco Chip Cookies</h4>Box of 5- ₹150</div>
+      <div class="item-card"><img src="cookie2.jpg" width="300" height="200" alt="Caramel"><h4>Caramel Cookies</h4>Box of 5- ₹150</div>
+      <div class="item-card"><img src="cookie3.jpg" width="300" height="200" alt="Butter Cookie"><h4>Butter Cookies</h4>Box of 5- ₹175</div>
+      <div class="item-card"><img src="cookie4.jpg" width="300" height="200" alt="Lemon"><h4>Lemon Cookies</h4>Box of 5- ₹250</div>
+    </div>
+  </section>
+
+  <section id="cupcakes" class="category-section">
+    <h2>Cupcakes</h2>
+    <div class="item-grid">
+      <div class="item-card"><img src="cup1.jpg" width="300" height="200" alt="Vanilla"><h4>Vanilla</h4>Box of 4- ₹200</div>
+      <div class="item-card"><img src="cup2.jpg" width="300" height="200" alt="Chocolate"><h4>Chocolate</h4>Box of 4- ₹200</div>
+      <div class="item-card"><img src="cup3.jpg" width="300" height="200" alt="Red Velvet"><h4>Red Velvet</h4>Box of 4- ₹250</div>
+      <div class="item-card"><img src="cup4.jpg" width="300" height="200" alt="Customization"><h4>Customization</h4>Box of 4- Cost Varies</div>
+      </div>
+  </section>
+
+  <section id="brownies" class="category-section">
+    <h2>Brownies</h2>
+    <div class="item-grid">
+        <div class="item-card"><img src="b1.jpg" width="300" height="200" alt="Brownies"><h4>Classic</h4>Box of 6- ₹500</div>
+        <div class="item-card"><img src="b2.jpg" width="300" height="200" alt="LEmon"><h4>Lemon Brownies</h4>Box of 6- ₹800</div>
+     
+    </div>
+  </section>
+
+  <section id="cheesecake" class="category-section">
+    <h2>Cheesecake</h2>
+    <div class="item-grid">
+        <div class="item-card"><img src="c1.jpg" width="300" height="200" alt="Mango"><h4>Mango</h4>120g- ₹350</div>
+        <div class="item-card"><img src="c2.jpg" width="300" height="200" alt="Biscoff"><h4>Biscoff</h4>120g- ₹250</div>
+        <div class="item-card"><img src="c3.jpg" width="300" height="200" alt="Nutella"><h4>Nutella</h4>120g- ₹250</div>
+        <div class="item-card"><img src="c4.jpg" width="300" height="200" alt="Oreo"><h4>Oreo</h4>120g- ₹250</div>
+    </div>
+  </section>
+
+  <section id="Healthy Baked Goods" class="category-section">
+    <h2>Healthy Baked Goods</h2>
+    <div class="item-grid">
+        <div class="item-card"><img src="h1.jpg" width="300" height="200" alt="Muffins"><h4>Whole wheat Muffins</h4>Box of 4- ₹350</div>
+        <div class="item-card"><img src="h2.jpg" width="300" height="200" alt="Banana Bread"><h4>Banana Bread</h4>150g- ₹250</div>
+
+    </div>
+  </section>
+  <section id="about" class="category-section">
+    
+    <p class="about-text">
+        
+        Hey there! I’m a 25-year-old finance professional by day and a passionate baker by... well, anytime I can get my hands on flour and frosting! What started as a weekend stress-buster quickly turned into a full-blown love affair with baking — the kind that smells like warm cookies and late-night cake experiments.
+
+        This little bakery is my sweet escape from spreadsheets and numbers. Every dessert I make is handcrafted with love, lots of butter, and just the right amount of chaos. Whether it's a classic chocolate cake or a quirky cupcake flavor, I believe that every bite should feel like a warm hug.
+        
+        Thanks for being here and supporting this sugar-filled side hustle. Let’s make life a little sweeter, one bite at a time.
+    </p></section>
+    <section id="reviews" class="category-section">
+        <h2>Customer Reviews</h2>
+        <div class="carousel">
+          <div class="review-slide active">
+            <p>"Absolutely the best brownies I've ever had! So rich and fudgy."</p>
+            <h4>- Ananya R.</h4>
+          </div>
+          <div class="review-slide">
+            <p>"The red velvet cupcakes were a hit at my party. Thank you!"</p>
+            <h4>- Rohan M.</h4>
+          </div>
+          <div class="review-slide">
+            <p>"Prompt service and divine cheesecake. Highly recommend."</p>
+            <h4>- Priya S.</h4>
+          </div>
+        </div>
+      </section>
+      
+  
+  <section id="order" class="category-section">
+    <h2>Order Now</h2>
+    <form style="max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 1rem;">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+  
+      <label for="product">Product (e.g. Chocolate Cake, Box of Cookies):</label>
+      <input type="text" id="product" name="product" required />
+  
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" value="1" required />
+  
+      <label for="message">Additional Requests:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+  
+      <button type="submit" style="padding: 0.5rem 1rem; background-color: #ffccbc; border: none; border-radius: 5px; font-weight: bold; color: #4e342e; cursor: pointer;">Submit Order</button>
+    </form>
+  </section>
+  
+
+  <footer>
+    &copy; 2025 25 Bakes. All rights reserved.
+  </footer>
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll(".review-slide");
+  
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+    }
+  
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+  
+    setInterval(nextSlide, 4000); // Change review every 4 seconds
+  </script>
+  
+
+</body>
+</html>
+
